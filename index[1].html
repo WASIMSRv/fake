@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bang Leader Vape Product</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .product-image {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 0 auto 20px auto;
+      border-radius: 8px;
+    }
+
+    h1 {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .rating {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .price-tier span {
+      display: inline-block;
+      margin: 5px 10px 5px 0;
+      background-color: #e0e0e0;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      margin: 5px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .buy {
+      background-color: #ffc107;
+    }
+
+    .cart {
+      background-color: #ddd;
+    }
+
+    .slider-container {
+      position: relative;
+      max-width: 500px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .slider-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .slider-buttons button {
+      background-color: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bang Leader 50K Puffs Disposable Vape</h1>
+    <div class="rating">★★★★★ (53 Reviews) | 381 Sold</div>
+    <img src="https://static.rpmvape.com/2025/03/Bang-Leader-50000-Puffs-Strawberry-RaspberryCherry-lce-and-Cherry-.jpg" alt="Bang Leader Vape Product" class="product-image">
+
+    <div class="slider-container">
+      <div class="slider" id="imageSlider">
+        <div class="slide"><img src="https://static.rpmvape.com/2025/03/Bang-Leader-50000-Puffs-Strawberry-RaspberryCherry-lce-and-Cherry-.jpg" alt="Slide 1"></div>
+        <div class="slide"><img src="https://static.rpmvape.com/2025/03/Bang-Leader-50000-Puffs-Grape-Ice.jpg" alt="Slide 2"></div>
+        <div class="slide"><img src="https://static.rpmvape.com/2025/03/Bang-Leader-50000-Puffs-Watermelon-Ice.jpg" alt="Slide 3"></div>
+        <div class="slide"><img src="https://static.rpmvape.com/2025/03/Bang-Leader-50000-Puffs-Blueberry-Raspberry-Lemon.jpg" alt="Slide 4"></div>
+      </div>
+      <div class="slider-buttons">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="price"><strong>Prices:</strong></div>
+    <div class="price-tier">
+      <span>$6.89 (50+ pcs)</span>
+      <span>$6.53 (154+ pcs)</span>
+      <span>$6.33 (200+ pcs)</span>
+      <span>$6.20 (500+ pcs)</span>
+    </div>
+
+    <p><strong>Flavor:</strong> Mixed Flavors (Fast Delivery)</p>
+    <p><strong>Total Cost:</strong> $344.50</p>
+
+    <div class="buttons">
+      <button class="btn buy" onclick="location.href='shipping.html'">Buy Now</button>
+      <button class="btn cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slider = document.getElementById('imageSlider');
+
+    function showSlide(index) {
+      if (index >= slides.length) currentIndex = 0;
+      else if (index < 0) currentIndex = slides.length - 1;
+      else currentIndex = index;
+
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+  </script>
+</body>
+</html>
